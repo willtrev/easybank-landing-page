@@ -59,11 +59,11 @@ html {
 }
 
 .header div span {
-  transition: filter 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .header div span:hover {
-  filter: brightness(85%);
+  color: var(--dark-blue);
   cursor: pointer;
 }
 
@@ -86,6 +86,7 @@ html {
 
 .request-button:hover {
   filter: brightness(85%);
+  cursor: pointer;
 }
 
 .hero {
@@ -270,11 +271,13 @@ html {
 }
 
 .footer nav span {
+  min-width: 66px;
   transition: filter 0.3s ease-in-out;
 }
 
 .footer nav span:hover {
-  filter: brightness(80%);
+  filter: brightness(90%);
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -295,7 +298,7 @@ html {
 }
 
 .icons-row img:hover {
-  filter: brightness(85%);
+  filter: brightness(60%);
   cursor: pointer;
 }
 
