@@ -27,9 +27,18 @@
   </head>
   <body>
     <!-- Navbar -->
+    <aside id="mobileMenu" class="mobile-menu">
+      <section id="mobileMenuContent" class="mobile-menu-content">
+        <span>Home</span>
+        <span>About</span>
+        <span>Contact</span>
+        <span>Blog</span>
+        <span>Careers</span>
+      </section>
+    </aside>
     <nav class="header">
-      <img id="logo" src="assets/images/logo.svg" alt="easybank logo" />
-      <div>
+      <img src="assets/images/logo.svg" alt="easybank logo" />
+      <div class="nav-desktop">
         <span>Home</span>
         <span>About</span>
         <span>Contact</span>
@@ -37,12 +46,12 @@
         <span>Careers</span>
       </div>
       <button class="request-button">Request Invite</button>
-      <!-- <img
+      <img
         id="buttonMobileMenu"
+        class="mobile-menu-button"
         src="assets/icons/hamburger.svg"
         alt="mobile menu button"
-      /> -->
-      <!-- <div id="mobileMenu">my menu</div> -->
+      />
     </nav>
 
     <!-- Hero section -->
@@ -56,15 +65,14 @@
         </p>
         <button class="request-button">Request Invite</button>
       </div>
-
       <img
-        id="logo"
+        id="backgroundHeroImage"
         class="background-image"
         src="assets/images/bg-intro-desktop.svg"
         alt="easybank logo"
       />
       <img
-        id="logo"
+        id="mockupHeroImage"
         class="mockup-image"
         src="assets/images/mockups.png"
         alt="easybank logo"
@@ -192,7 +200,7 @@
           <span>Privacy Policy</span>
         </nav>
       </section>
-      <div class="align-right-box">
+      <div class="request-box">
         <button class="request-button">Request Invite</button>
         <span>&copy; Easybank. All Rights Reserved</span>
       </div>
