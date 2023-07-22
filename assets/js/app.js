@@ -1,26 +1,26 @@
-const buttonMobileMenu = document.getElementById('buttonMobileMenu');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobileMenuContent = document.getElementById('mobileMenuContent')
-const htmlElement = document.getElementsByTagName('html')
-const backgroundHeroImage = document.getElementById('backgroundHeroImage');
+const buttonMobileMenu = document.querySelector('.mobile-menu-button');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuContent = document.querySelector('.mobile-menu-content');
+const backgroundHeroImage = document.querySelector('.background-image');
+const htmlElement = document.getElementsByTagName('html')[0];
 
-const SCREEN_BREAKPOINT = 1280
+const MOBILE_SCREEN_BREAKPOINT = 1280;
 
 let isMobileMenuOpen = false;
 
-if (window.screen.width < SCREEN_BREAKPOINT) {
-  backgroundHeroImage.src = 'assets/images/bg-intro-mobile.svg'
+if (window.screen.width < MOBILE_SCREEN_BREAKPOINT) {
+  backgroundHeroImage.src = 'assets/images/bg-intro-mobile.svg';
 }
-if (window.screen.width >= SCREEN_BREAKPOINT) {
-  backgroundHeroImage.src = 'assets/images/bg-intro-desktop.svg'
+if (window.screen.width >= MOBILE_SCREEN_BREAKPOINT) {
+  backgroundHeroImage.src = 'assets/images/bg-intro-desktop.svg';
 }
 
 function changeBackgroundImageMobile() {
-  if (window.screen.width < SCREEN_BREAKPOINT) {
-    backgroundHeroImage.src = 'assets/images/bg-intro-mobile.svg'
+  if (window.screen.width < MOBILE_SCREEN_BREAKPOINT) {
+    backgroundHeroImage.src = 'assets/images/bg-intro-mobile.svg';
   }
-  if (window.screen.width >= SCREEN_BREAKPOINT) {
-    backgroundHeroImage.src = 'assets/images/bg-intro-desktop.svg'
+  if (window.screen.width >= MOBILE_SCREEN_BREAKPOINT) {
+    backgroundHeroImage.src = 'assets/images/bg-intro-desktop.svg';
   }
 }
 
@@ -29,17 +29,15 @@ function openMobileNavMenu() {
     buttonMobileMenu.src = 'assets/icons/hamburger.svg';
     isMobileMenuOpen = false;
     mobileMenu.classList.remove('active-menu');
-    htmlElement[0].classList.remove('remove-scroll');
-
+    htmlElement.classList.remove('remove-scroll');
   } else {
     buttonMobileMenu.src = 'assets/icons/close.svg';
     isMobileMenuOpen = true;
     mobileMenu.classList.toggle('active-menu', isMobileMenuOpen);
-    htmlElement[0].classList.toggle('remove-scroll', isMobileMenuOpen)
+    htmlElement.classList.toggle('remove-scroll', isMobileMenuOpen);
   }
 }
 
 window.addEventListener('resize', changeBackgroundImageMobile);
 
 buttonMobileMenu.addEventListener('click', openMobileNavMenu);
-
