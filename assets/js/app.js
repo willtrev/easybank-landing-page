@@ -8,12 +8,14 @@ const MOBILE_SCREEN_BREAKPOINT = 1280;
 
 let isMobileMenuOpen = false;
 
-if (window.screen.width < MOBILE_SCREEN_BREAKPOINT) {
-  backgroundHeroImage.src = 'assets/images/bg-intro-mobile.svg';
-}
-if (window.screen.width >= MOBILE_SCREEN_BREAKPOINT) {
-  backgroundHeroImage.src = 'assets/images/bg-intro-desktop.svg';
-}
+(function checkInitialScreenWidth() {
+  if (window.screen.width < MOBILE_SCREEN_BREAKPOINT) {
+    backgroundHeroImage.src = 'assets/images/bg-intro-mobile.svg';
+  }
+  if (window.screen.width >= MOBILE_SCREEN_BREAKPOINT) {
+    backgroundHeroImage.src = 'assets/images/bg-intro-desktop.svg';
+  }
+})();
 
 function changeBackgroundImageMobile() {
   if (window.screen.width < MOBILE_SCREEN_BREAKPOINT) {
